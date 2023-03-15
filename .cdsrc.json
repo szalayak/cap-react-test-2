@@ -1,0 +1,16 @@
+{
+    "[development]": {
+        "auth": {
+            "passport": {
+                "strategy": "mock",
+                "users": {
+                    "admin@wricef.com": {
+                        "password": "tracker",
+                        "ID": "admin",
+                        "roles": ["Admin"]
+                    }
+                }
+            }
+        }
+    }
+}
