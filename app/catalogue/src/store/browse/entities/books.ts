@@ -9,7 +9,8 @@ export const booksApi = browseApi.injectEndpoints({
 			transformResponse: (response: BookResponse) => {
 				return response.value
 			},
-		}),
+			providesTags: ["Book"]
+		})
 	}),
 	overrideExisting: false,
 })

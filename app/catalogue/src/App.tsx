@@ -1,18 +1,16 @@
-import { useGetBooksQuery } from './store/browse/entities';
+import { HashRouter, Route, Routes } from "react-router-dom";
+import { Admin, Catalogue, Home } from './pages';
 
 function App() {
 
-  const {data: books, isLoading} = useGetBooksQuery({});
-  
   return (
-    <div>
-      {isLoading && <p>Loading...</p>}
-      <ul>
-        {books?.map(({ID, author, title}) => {
-          return <li key={ID}>{author} - {title}</li>
-        })}
-      </ul>
-    </div>
+    <HashRouter>
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path="catalogue" element={<Catalogue />} />
+        <Route path="admin" element={<Admin />} />
+      </Routes>
+    </HashRouter>
   )
 }
 
