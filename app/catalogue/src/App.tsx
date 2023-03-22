@@ -1,5 +1,5 @@
 import { HashRouter, Route, Routes } from "react-router-dom";
-import { Admin, Catalogue, Home } from './pages';
+import { About, Admin, Catalogue, Home, NotFound } from './pages';
 
 function App() {
 
@@ -9,6 +9,8 @@ function App() {
         <Route index element={<Home />} />
         <Route path="catalogue" element={<Catalogue />} />
         <Route path="admin" element={<Admin />} />
+        <Route path="about" element={<About />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </HashRouter>
   )
